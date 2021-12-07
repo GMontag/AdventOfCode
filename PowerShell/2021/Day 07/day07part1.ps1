@@ -1,0 +1,1 @@
+$in = Get-Content .\input.txt
