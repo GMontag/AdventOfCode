@@ -13,7 +13,7 @@ class Monkey {
         #parse starting items
         $this.items = $text[0] | Select-String "(\d+)" -allmatches | % matches | % value | % { [int]$_ }
         #parse operation
-        $this.operation = $text[1].Substring(13)
+        $this.operation = $text[1].Substring(19)
         #parse test
         $this.test = [int]$text[2].Substring(21)
         #parse test actions
@@ -25,6 +25,7 @@ class Monkey {
 
     [void]InspectItems() {
         while ($this.items.Count -gt 0) {
+            $item = $this.items.Dequeue()
             
         }
     }
